@@ -1,8 +1,8 @@
 #pragma once
 #include <cstdio>
 #include <string>
-#ifndef COLOR_CODES_H
-#define COLOR_CODES_H
+#ifndef ANSIConsoleColors
+#define ANSIConsoleColors
 
 namespace colors
 {
