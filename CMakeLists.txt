@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(color_codes VERSION 0.0.1)
 project(color_codes-example VERSION 0.0.1)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 
 execute_process(
         COMMAND bash -c "g++ --version"
@@ -23,9 +23,3 @@ target_compile_options(${PROJECT_NAME} PRIVATE -Os)
 
 # Set compile options
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++ -static -lpthread")
-
-# Strip debug symbols
-if (CMAKE_BUILD_TYPE MATCHES "Release|RelWithDebInfo")
-    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-            COMMAND ${CMAKE_STRIP} "$<TARGET_FILE:${PROJECT_NAME}>")
-endif ()
