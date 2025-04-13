@@ -3,13 +3,8 @@ project(color_codes VERSION 0.0.1)
 project(color_codes-example VERSION 0.0.1)
 set(CMAKE_CXX_STANDARD 11)
 
-execute_process(
-        COMMAND bash -c "g++ --version"
-        OUTPUT_VARIABLE GCC_VERSION
-)
-
 add_library(color_codes INTERFACE
-        example.cpp)
+        ANSIConsoleColors.h)
 
 add_executable(color_codes-example example.cpp)
 target_link_libraries(color_codes-example color_codes)
