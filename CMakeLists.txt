@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(color_codes VERSION 0.0.1)
+project(color_codes VERSION 0.0.2)
 project(color_codes-example VERSION 0.0.1)
 set(CMAKE_CXX_STANDARD 11)
 
-add_library(color_codes INTERFACE
-        ANSIConsoleColors.h)
+add_library(color_codes STATIC ANSIConsoleColors.h)
 
 add_executable(color_codes-example example.cpp)
 target_link_libraries(color_codes-example color_codes)
