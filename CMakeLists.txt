@@ -1,9 +1,11 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.22)
 project(color_codes VERSION 0.0.2)
 project(color_codes-example VERSION 0.0.1)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 23)
+
 
 add_library(color_codes STATIC ANSIConsoleColors.h)
+set_target_properties(color_codes PROPERTIES LINKER_LANGUAGE CXX)
 
 add_executable(color_codes-example example.cpp)
 target_link_libraries(color_codes-example color_codes)
