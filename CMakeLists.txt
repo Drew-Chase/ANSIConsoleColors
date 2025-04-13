@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
 project(color_codes VERSION 0.0.2)
 project(color_codes-example VERSION 0.0.1)
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 11)
 
 
 add_library(color_codes STATIC ANSIConsoleColors.h)
